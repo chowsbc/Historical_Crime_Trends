@@ -153,7 +153,9 @@ def processdata(States, CrimeType, start_year, end_year, type_choice):
                 fig.show()
 
 if __name__ == "__main__":
-    
+
+    loop = 'n'    
+
     Continue = 'y'
     
     while True:
@@ -170,7 +172,10 @@ if __name__ == "__main__":
     
             dates = []
 
-            state = input('\nChoose a state from which to query crime data: ')
+            if loop  == 'y':
+                state = input('\nChoose a state from which to query crime data: ')
+            else:
+                state = input('Choose a state from which to query crime data: ')
 
             while True:
                 if firstquery == False:
@@ -254,23 +259,25 @@ if __name__ == "__main__":
                 
                 processdata(states, column_type_choice, start_year, end_year, type_choice)
                 
-                Continue_input = input('\nStart another query? Y/N \n')
+                Continue_input = input('\nStart another query? Y/N')
                 Continue = Continue_input.lower()
                 if Continue == 'y' or Continue == 'n':
                     if Continue == 'y':
                         start_year = ''
                         end_year = ''
+                        loop = 'y'
                     if Continue == 'n':
                         print('\nExiting')
                     break
                 else:
                     while True:
-                       Continue_input = input('\n Please select Y if you would like to start another query or N to exit. \n')
+                       Continue_input = input('\nPlease select Y if you would like to start another query or N to exit.')
                        Continue = Continue_input.lower()
                        if Continue == 'y' or Continue == 'n':
                             if Continue == 'y':
                                start_year = ''
                                end_year = ''
+                               loop = 'y'
                             if Continue == 'n':
                                print('\nExiting')
                             break        
