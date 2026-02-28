@@ -29,3 +29,6 @@ and then hit the "Enter" key to choose the crime type to query.
   	    There will be one line representing each selected state. This will be displayed in your web browser.
   	 e. If one of the "all" crime types was selected ("Violent-All" or "Property-All"), you will also see a bar chart showing
   	    the percentage breakdown for the crime subtypes under the the crimetype. This will be displayed in your web browser.
+
+Data Source:
+Whitcomb, R., Choi, J. M., & Guan, B. (2021). State Crime CSV File (Version 3.0.0) [Data set]. CORGIS Datasets Project. https://corgis-edu.github.io/corgis/csv/state_crime/
